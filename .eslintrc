@@ -1,0 +1,16 @@
+{
+  "extends": "react-app",
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "quotes": [2, "single"],
+    "indent": "off",
+    "lines-around-comment": 0,
+    "react/no-array-index-key": 0,
+    "eol-last": ["error", "always"],
+    "react/jsx-indent": "off"
+  }
+}

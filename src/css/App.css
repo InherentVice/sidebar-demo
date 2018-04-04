@@ -1,0 +1,248 @@
+/* Das CSS ist übersichtlich genug, dass man auf SASS verzichten kann. */
+
+/* Layout */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.noDemo * {
+  color: #999;
+}
+
+header {
+  width: 100%;
+  padding: 2rem;
+  display: block;
+}
+
+section.noDemo {
+  box-sizing: border-box;
+  padding: 2rem;
+  display: inline-block;
+}
+
+section.sidebar {
+  padding: 2rem;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: flex-end;
+  background-color: #2b81cc;
+  padding: 1rem 1rem 0;
+}
+
+.sidebarBody {
+  border: 3px solid #dadada;
+  border-top: none;
+}
+
+/* Tabs */
+
+button {
+  border: none;
+  font-size: 1.2rem;
+}
+
+button.inactive {
+  padding: 0.8rem 1.1rem;
+  color: #fff;
+  background-color: #95c0e3;
+  margin: 0.1rem;
+}
+
+button.active {
+  padding: 1rem 1.6rem;
+  background-color: #fff;
+  color: #333;
+}
+
+button.active:focus {
+  outline: none;
+}
+
+.newsEntry,
+.eventsEntry {
+  border-bottom: 1px solid #dadada;
+  padding: 2rem 1.5rem;
+}
+
+/* Aktuelles */
+
+.newsEntry {
+  min-height: 10rem;
+}
+
+.newsEntry img {
+  width: 12rem;
+  height: 9rem;
+  margin-top: 0.2rem;
+  display: inline-block;
+  float: left;
+  position: absolute;
+  border: 3px solid #d9d9d9;
+}
+
+.newsEntry .entryDate,
+.newsEntry .entryTitle,
+.newsEntry .entryDesc,
+.newsEntry .entryLink {
+  margin-left: 13.6rem;
+}
+
+.newsEntry .entryDate {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.newsEntry .entryTitle {
+  color: #2c82cd;
+  font-weight: normal;
+  font-size: 1.6rem;
+  margin-top: 0.8rem;
+}
+
+.newsEntry .entryDesc {
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.allNewsLink,
+.newsEntry .entryLink {
+  color: #333;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ /* Der kleine blaue Pfeil vor den Links */
+.allNewsLink:before,
+.newsEntry .entryLink:before {
+  content: '';
+  display: inline-block;
+  margin-right: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 2px solid #2c82cd;
+  border-right: 2px solid #2c82cd;
+  transform: rotate(45deg);
+}
+
+.newsFooter {
+  text-align: right;
+  padding: 1rem;
+}
+/* Veranstaltungen */
+
+.eventsEntry {
+  display: flex;
+  align-items: baseline;
+}
+
+.eventsEntry .entryDate {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.eventsEntry .entryTitle {
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  color: #2c82cd;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1400px) {
+  /* auf großen Displays die gesamte Seite 10% größer darstellen */
+  html {
+    font-size: 68.75%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .App {
+    width: 120rem;
+    margin: 0 auto;
+  }
+  section.noDemo {
+    width: 72rem;
+  }
+  section.sidebar {
+    width: 48rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .App {
+    width: 100%;
+  }
+  section.noDemo {
+    width: 60%;
+  }
+
+  section.sidebar {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  section.sidebar {
+    width: 100%;
+  }
+  .newsBody {
+    display: flex;
+  }
+  .newsEntry {
+    width: 33%;
+    border-right: 1px solid #dadada;
+    border-bottom: none;
+  }
+  .newsEntry:last-child {
+    border-right: none;
+  }
+  .newsEntry img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    border: 2px solid #dadada;
+    margin-left: -1px;
+    margin-bottom: 1rem;
+  }
+  .newsEntry .entryDate,
+  .newsEntry .entryTitle,
+  .newsEntry .entryDesc,
+  .newsEntry .entryLink {
+    clear: left;
+    display: block;
+    margin-left: 0;
+  }
+
+  .newsFooter {
+    border-top: 1px solid #dadada;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .newsBody {
+    flex-direction: column;
+  }
+  .newsEntry {
+    width: inherit;
+    border-right: none;
+    border-bottom: 1px solid #dadada;
+  }
+  .newsEntry img {
+    width: 100%;
+  }
+  .newsFooter {
+    border-top: none;
+  }
+}
