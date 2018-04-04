@@ -15,3 +15,5 @@ or
 npm install
 npm run start
 ```
+
+Preview: https://mm-sidebar-demo.sloppy.zone

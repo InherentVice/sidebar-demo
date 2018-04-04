@@ -1,0 +1,9 @@
+version: "v1"
+project: "sidebar-demo"
+services:
+  frontend:
+    nginx:
+      image: inherentvice/sidebar-demo
+      domain: "mm-sidebar-demo.sloppy.zone"
+      port: 80
+      mem: 64
