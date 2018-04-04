@@ -13,8 +13,7 @@ export default class NewsEntry extends React.Component {
       entryLink,
       entryLinkText,
     } = this.props;
-
-    // Bilder 10% größer als benötigt für große Displays. Per CSS skaliert
+    
     const imgWidth = 300;
     const imgHeight = 233;
 
