@@ -13,7 +13,7 @@ export default class NewsEntry extends React.Component {
       entryLink,
       entryLinkText,
     } = this.props;
-    
+
     const imgWidth = 300;
     const imgHeight = 233;
 
